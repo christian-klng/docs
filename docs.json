@@ -172,5 +172,8 @@
       "source": "/",
       "destination": "/de/index"
     }
-  ]
+  ],
+  "appearance": {
+    "default": "system"
+  }
 }
