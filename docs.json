@@ -153,13 +153,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@revisory.ai"
+        "href": "mailto:admin@revisory.app"
       }
     ],
     "primary": {
       "type": "button",
       "label": "App öffnen",
-      "href": "https://app.revisory.ai"
+      "href": "https://login.revisory.app"
     }
   },
   "footer": {
