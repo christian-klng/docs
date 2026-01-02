@@ -134,6 +134,21 @@
           }
         ]
       }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Homepage",
+          "href": "https://www.revisory.app",
+          "icon": "house"
+        },
+        {
+          "anchor": "Revisory App",
+          "href": "https://login.revisory.app",
+          "icon": "arrow-up-right-from-square"
+        }
+      ]
+    }
   },
   "logo": {
     "light": "/logo/light.png",
