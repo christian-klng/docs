@@ -73,7 +73,7 @@
         ]
       },
       {
-        "tab": "English",
+        "tab": "English 🇬🇧",
         "groups": [
           {
             "group": "Getting Started",
@@ -134,16 +134,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Revisory App",
-          "href": "https://app.revisory.ai",
-          "icon": "arrow-up-right-from-square"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.png",
