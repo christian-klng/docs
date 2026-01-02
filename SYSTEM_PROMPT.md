@@ -106,9 +106,36 @@ Jede Seite beginnt mit einem Link zur anderen Sprache:
 
 ---
 
+## Vorgehen bei Änderungen
+
+### Vor jeder Änderung
+
+1. **Immer zuerst lesen:**
+   - `README.md` – Projektübersicht
+   - `docs.json` – aktuelle Seitenstruktur und Navigation
+
+2. **Bei inhaltlichen Änderungen zusätzlich prüfen:**
+   - Existiert das Thema schon auf einer anderen Seite?
+   - Wo ist der richtige Ort für diese Information?
+
+### Duplikate vermeiden
+
+**Oberste Priorität:** Jede Information erscheint nur einmal.
+
+- **Keine doppelten Seiten:** Bevor eine neue Seite erstellt wird, prüfen ob das Thema schon behandelt wird
+- **Keine doppelten Textpassagen:** Eine Info gehört auf genau eine Seite, nicht auf mehrere
+- **Querverweise statt Kopien:** Wenn eine andere Seite relevant ist, verlinken – nicht den Inhalt wiederholen
+
+**Beispiel:**
+- OAuth-Anbieter (Google, GitHub) → nur in `registrierung.mdx`
+- Rollen (Owner, Admin, Member) → nur in `team-verwalten.mdx`
+- Credit-System → nur in `abrechnung.mdx`
+
+---
+
 ## Wichtige Regeln
 
-- **Keine Duplikate:** Jede Information gehört auf genau eine Seite
+- **Keine Duplikate:** Jede Information gehört auf genau eine Seite (siehe oben)
 - **Sprachparität:** DE und EN Seiten müssen existieren
 - **Konsistente Terminologie:** Gleiche Begriffe für gleiche Konzepte
 - **Icons:** Font Awesome Namen ohne Präfix (`"icon": "rocket"`)
