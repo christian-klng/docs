@@ -1,0 +1,54 @@
+---
+title: "Uploading Documents"
+description: "Upload files via drag-and-drop or file selection and track processing status."
+icon: "upload"
+---
+
+<Note>
+🇩🇪 [Auf Deutsch lesen](/de/dokumente/hochladen)
+</Note>
+
+Revisory automatically processes your documents to extract text for AI analysis.
+
+## Uploading
+
+1. Click **Documents** in the sidebar
+2. Navigate to the desired folder (optional)
+3. Drag files into the upload area or click **Select File**
+4. You can upload multiple files at once
+
+## Processing Status
+
+After upload, each document goes through automatic processing:
+
+| Status | Meaning |
+|--------|---------|
+| **Pending** | Document waiting for processing |
+| **Processing** | Text is being extracted |
+| **Done** | Document is ready for analyses |
+| **Failed** | Extraction not possible |
+
+<Info>
+Processing takes a few seconds to a minute, depending on file size and format.
+</Info>
+
+## Adding URLs
+
+Besides files, you can also analyze web pages:
+
+1. Click **Add URL**
+2. Enter the full URL (including `https://`)
+3. Revisory automatically loads and extracts the page content
+
+## Versioning
+
+If you upload a file with the same name again, Revisory automatically creates a new version. The filename receives a suffix (e.g., `report.pdf` → `report_v2.pdf`).
+
+## Limits
+
+- Maximum file size: 10 MB per file
+- Supported formats: See [Supported Formats](/en/documents/supported-formats)
+
+<Warning>
+Documents with "Failed" status cannot be used for analyses. Check the format and upload the file again.
+</Warning>

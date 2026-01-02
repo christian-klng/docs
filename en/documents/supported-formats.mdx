@@ -1,0 +1,66 @@
+---
+title: "Supported Formats"
+description: "Overview of all file formats that Revisory can process."
+icon: "file"
+---
+
+<Note>
+🇩🇪 [Auf Deutsch lesen](/de/dokumente/unterstuetzte-formate)
+</Note>
+
+Revisory supports the most common document formats and automatically extracts text for AI analysis.
+
+## Supported File Types
+
+| Format | Extension | Description |
+|--------|-----------|-------------|
+| **PDF** | `.pdf` | Portable Document Format – text is extracted via OCR if necessary |
+| **Word** | `.docx` | Microsoft Word documents |
+| **Excel** | `.xlsx` | Spreadsheets – cell contents are extracted as text |
+| **Text** | `.txt` | Plain text files |
+| **Markdown** | `.md` | Markdown-formatted documents |
+| **URL** | – | Web pages – content is loaded automatically |
+
+## Notes on Specific Formats
+
+### PDF
+
+- Text-based PDFs are processed directly
+- Scanned documents automatically go through OCR (text recognition)
+- Complex layouts with many columns may affect text extraction
+
+### Excel
+
+- All worksheets are extracted
+- Formulas are converted to calculated values
+- Charts and images are not processed
+
+### URLs
+
+- The page must be publicly accessible
+- JavaScript-rendered content may not be fully captured
+- Login-protected pages cannot be processed
+
+## Unsupported Formats
+
+The following formats are currently not supported:
+
+- Older Word formats (`.doc`)
+- PowerPoint (`.pptx`, `.ppt`)
+- Image files without text (`.jpg`, `.png`)
+- Audio and video files
+
+<Tip>
+Convert unsupported formats to PDF or DOCX before uploading.
+</Tip>
+
+## File Size Limits
+
+| Limit | Value |
+|-------|-------|
+| Maximum file size | 10 MB |
+| Recommended document length | Up to 50 pages |
+
+<Info>
+Very long documents may increase analysis time and consume more credits.
+</Info>

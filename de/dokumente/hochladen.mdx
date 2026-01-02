@@ -1,0 +1,54 @@
+---
+title: "Dokumente hochladen"
+description: "Lade Dateien per Drag-and-Drop oder Dateiauswahl hoch und verfolge den Verarbeitungsstatus."
+icon: "upload"
+---
+
+<Note>
+🇬🇧 [Read in English](/en/documents/uploading)
+</Note>
+
+Revisory verarbeitet deine Dokumente automatisch, um den Text für die KI-Analyse zu extrahieren.
+
+## Hochladen
+
+1. Klicke in der Seitenleiste auf **Dokumente**
+2. Navigiere zum gewünschten Ordner (optional)
+3. Ziehe Dateien in den Upload-Bereich oder klicke auf **Datei auswählen**
+4. Du kannst mehrere Dateien gleichzeitig hochladen
+
+## Verarbeitungsstatus
+
+Nach dem Upload durchläuft jedes Dokument eine automatische Verarbeitung:
+
+| Status | Bedeutung |
+|--------|-----------|
+| **Ausstehend** | Dokument wartet auf Verarbeitung |
+| **Verarbeitung** | Text wird extrahiert |
+| **Fertig** | Dokument ist bereit für Analysen |
+| **Fehlgeschlagen** | Extraktion nicht möglich |
+
+<Info>
+Die Verarbeitung dauert wenige Sekunden bis zu einer Minute, abhängig von Dateigröße und Format.
+</Info>
+
+## URLs hinzufügen
+
+Neben Dateien kannst du auch Webseiten analysieren:
+
+1. Klicke auf **URL hinzufügen**
+2. Gib die vollständige URL ein (inkl. `https://`)
+3. Revisory lädt und extrahiert den Seiteninhalt automatisch
+
+## Versionierung
+
+Wenn du eine Datei mit demselben Namen erneut hochlädst, erstellt Revisory automatisch eine neue Version. Der Dateiname erhält einen Suffix (z.B. `bericht.pdf` → `bericht_v2.pdf`).
+
+## Limits
+
+- Maximale Dateigröße: 10 MB pro Datei
+- Unterstützte Formate: Siehe [Unterstützte Formate](/de/dokumente/unterstuetzte-formate)
+
+<Warning>
+Dokumente mit Status "Fehlgeschlagen" können nicht für Analysen verwendet werden. Prüfe das Format und lade die Datei erneut hoch.
+</Warning>

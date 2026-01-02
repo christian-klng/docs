@@ -1,0 +1,79 @@
+---
+title: "Sicherheit"
+description: "Technische Maßnahmen zum Schutz deiner Daten."
+icon: "shield"
+---
+
+<Note>
+🇬🇧 [Read in English](/en/privacy/security)
+</Note>
+
+Revisory setzt auf mehrschichtige Sicherheitsmaßnahmen, um deine Daten zu schützen.
+
+## Verschlüsselung
+
+### Daten in Übertragung
+
+Alle Verbindungen zu Revisory sind mit TLS 1.3 verschlüsselt. Das gilt für:
+
+- Browser-Verbindungen
+- API-Kommunikation
+- Datei-Uploads
+
+### Daten im Ruhezustand
+
+Gespeicherte Daten werden mit AES-256 verschlüsselt:
+
+- Datenbank-Inhalte
+- Hochgeladene Dateien
+- Backups
+
+## Zugriffskontrolle
+
+### Authentifizierung
+
+- Passwörter werden mit modernen Hash-Verfahren gespeichert
+- OAuth 2.0 für Google- und GitHub-Login
+- Session-Management mit automatischem Ablauf
+
+### Autorisierung
+
+- Rollenbasierte Zugriffskontrolle (Owner, Admin, Member)
+- Isolierte Datenbereiche pro Organisation
+- Keine organisationsübergreifenden Zugriffe
+
+## Infrastruktur
+
+### Hosting
+
+- Europäische Rechenzentren
+- Automatische Skalierung bei hoher Last
+- Redundante Systeme für Ausfallsicherheit
+
+### Backups
+
+- Tägliche automatische Backups
+- Verschlüsselte Speicherung
+- 30 Tage Aufbewahrung
+
+## Sicherheitspraktiken
+
+### Entwicklung
+
+- Code-Reviews für alle Änderungen
+- Automatisierte Sicherheitstests
+- Regelmäßige Dependency-Updates
+
+### Monitoring
+
+- Überwachung auf ungewöhnliche Aktivitäten
+- Logging sicherheitsrelevanter Ereignisse
+- Alerting bei potenziellen Vorfällen
+
+## Sicherheitsvorfall melden
+
+Falls du eine Sicherheitslücke entdeckst, kontaktiere uns bitte umgehend:
+
+- E-Mail: security@revisory.ai
+
+Wir nehmen alle Meldungen ernst und antworten innerhalb von 24 Stunden.

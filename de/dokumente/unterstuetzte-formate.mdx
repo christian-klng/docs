@@ -1,0 +1,66 @@
+---
+title: "Unterstützte Formate"
+description: "Übersicht aller Dateiformate, die Revisory verarbeiten kann."
+icon: "file"
+---
+
+<Note>
+🇬🇧 [Read in English](/en/documents/supported-formats)
+</Note>
+
+Revisory unterstützt die gängigsten Dokumentformate und extrahiert den Text automatisch für die KI-Analyse.
+
+## Unterstützte Dateitypen
+
+| Format | Erweiterung | Beschreibung |
+|--------|-------------|--------------|
+| **PDF** | `.pdf` | Portable Document Format – Text wird per OCR extrahiert, falls nötig |
+| **Word** | `.docx` | Microsoft Word-Dokumente |
+| **Excel** | `.xlsx` | Tabellenkalkulationen – Zellinhalte werden als Text extrahiert |
+| **Text** | `.txt` | Reine Textdateien |
+| **Markdown** | `.md` | Markdown-formatierte Dokumente |
+| **URL** | – | Webseiten – Inhalt wird automatisch geladen |
+
+## Hinweise zu einzelnen Formaten
+
+### PDF
+
+- Textbasierte PDFs werden direkt verarbeitet
+- Gescannte Dokumente durchlaufen automatisch OCR (Texterkennung)
+- Komplexe Layouts mit vielen Spalten können die Textextraktion beeinträchtigen
+
+### Excel
+
+- Alle Tabellenblätter werden extrahiert
+- Formeln werden als berechnete Werte übernommen
+- Diagramme und Bilder werden nicht verarbeitet
+
+### URLs
+
+- Die Seite muss öffentlich zugänglich sein
+- JavaScript-gerenderte Inhalte werden möglicherweise nicht vollständig erfasst
+- Login-geschützte Seiten können nicht verarbeitet werden
+
+## Nicht unterstützte Formate
+
+Folgende Formate werden derzeit nicht unterstützt:
+
+- Ältere Word-Formate (`.doc`)
+- PowerPoint (`.pptx`, `.ppt`)
+- Bilddateien ohne Text (`.jpg`, `.png`)
+- Audio- und Videodateien
+
+<Tip>
+Konvertiere nicht unterstützte Formate vor dem Upload in PDF oder DOCX.
+</Tip>
+
+## Dateigrößen-Limits
+
+| Limit | Wert |
+|-------|------|
+| Maximale Dateigröße | 10 MB |
+| Empfohlene Dokumentlänge | Bis 50 Seiten |
+
+<Info>
+Sehr lange Dokumente können die Analyse-Zeit erhöhen und mehr Credits verbrauchen.
+</Info>
