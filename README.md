@@ -28,21 +28,6 @@ docs/
 └── images/                # Bilder
 ```
 
-## Lokale Entwicklung
-
-```bash
-# Mintlify CLI installieren
-npm i -g mint
-
-# Entwicklungsserver starten
-mint dev
-
-# Bei Problemen: CLI aktualisieren
-mint update
-```
-
-Vorschau unter `http://localhost:3000`
-
 ## Deployment
 
 Änderungen auf dem `main` Branch werden automatisch deployed.
