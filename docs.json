@@ -138,6 +138,11 @@
     "global": {
       "anchors": [
         {
+          "anchor": "Homepage",
+          "href": "https://www.revisory.app",
+          "icon": "house"
+        },
+        {
           "anchor": "Revisory App",
           "href": "https://app.revisory.ai",
           "icon": "arrow-up-right-from-square"
