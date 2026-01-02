@@ -1,0 +1,79 @@
+---
+title: "Security"
+description: "Technical measures to protect your data."
+icon: "shield"
+---
+
+<Note>
+🇩🇪 [Auf Deutsch lesen](/de/datenschutz/sicherheit)
+</Note>
+
+Revisory implements multi-layered security measures to protect your data.
+
+## Encryption
+
+### Data in transit
+
+All connections to Revisory are encrypted with TLS 1.3. This applies to:
+
+- Browser connections
+- API communication
+- File uploads
+
+### Data at rest
+
+Stored data is encrypted with AES-256:
+
+- Database contents
+- Uploaded files
+- Backups
+
+## Access control
+
+### Authentication
+
+- Passwords are stored using modern hashing algorithms
+- OAuth 2.0 for Google and GitHub login
+- Session management with automatic expiration
+
+### Authorization
+
+- Role-based access control (Owner, Admin, Member)
+- Isolated data areas per organization
+- No cross-organization access
+
+## Infrastructure
+
+### Hosting
+
+- European data centers
+- Automatic scaling under high load
+- Redundant systems for reliability
+
+### Backups
+
+- Daily automatic backups
+- Encrypted storage
+- 30-day retention
+
+## Security practices
+
+### Development
+
+- Code reviews for all changes
+- Automated security testing
+- Regular dependency updates
+
+### Monitoring
+
+- Monitoring for unusual activity
+- Logging of security-relevant events
+- Alerting for potential incidents
+
+## Reporting a security issue
+
+If you discover a security vulnerability, please contact us immediately:
+
+- Email: security@revisory.ai
+
+We take all reports seriously and respond within 24 hours.

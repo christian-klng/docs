@@ -1,17 +1,31 @@
 # Revisory Documentation
 
-Offizielle Dokumentation für [Revisory](https://revisory.ai) – die KI-gestützte Plattform zur Dokumentenanalyse.
+Die offizielle Dokumentation für [Revisory](https://revisory.ai) – KI-gestützte Dokumentenanalyse.
 
 ## Struktur
 
 ```
 docs/
-├── de/                  # Deutsche Dokumentation
-├── en/                  # English Documentation
-├── snippets/            # Wiederverwendbare Komponenten
-├── images/              # Bilder und Screenshots
-├── logo/                # Logos (light/dark)
-└── docs.json            # Mintlify-Konfiguration
+├── de/                    # Deutsche Dokumentation
+│   ├── erste-schritte/    # Schnelleinstieg
+│   ├── dokumente/         # Dokumentenmanagement
+│   ├── analysen/          # Bewertungen & Ergebnisse
+│   ├── organisation/      # Team & Einstellungen
+│   ├── konto/             # Persönliche Einstellungen
+│   ├── datenschutz/       # Daten & Sicherheit
+│   └── hilfe/             # Fehlerbehebung
+│
+├── en/                    # English Documentation
+│   ├── getting-started/
+│   ├── documents/
+│   ├── analyses/
+│   ├── organization/
+│   ├── account/
+│   ├── privacy/
+│   └── help/
+│
+├── docs.json              # Mintlify Konfiguration
+└── images/                # Bilder
 ```
 
 ## Lokale Entwicklung
@@ -29,24 +43,25 @@ mint update
 
 Vorschau unter `http://localhost:3000`
 
-## Neue Seite erstellen
+## Deployment
 
-1. MDX-Datei im passenden Ordner anlegen (z.B. `de/dokumente/neue-seite.mdx`)
+Änderungen auf dem `main` Branch werden automatisch deployed.
+
+## Neue Seite hinzufügen
+
+1. MDX-Datei im passenden Ordner erstellen
 2. Frontmatter hinzufügen:
    ```yaml
    ---
-   title: "Seitentitel"
-   description: "Kurzbeschreibung"
+   title: "Titel"
+   description: "Beschreibung"
+   icon: "icon-name"
    ---
    ```
-3. Seite in `docs.json` unter der entsprechenden Gruppe eintragen
-4. Änderungen committen und pushen → Auto-Deploy
+3. Sprachlink zur Gegenseite einfügen
+4. In `docs.json` unter der passenden Gruppe registrieren
 
-## Deployment
+## Ressourcen
 
-Änderungen auf dem `main`-Branch werden automatisch zu Mintlify deployed.
-
-## Links
-
-- [Revisory App](https://app.revisory.ai)
 - [Mintlify Dokumentation](https://mintlify.com/docs)
+- [Font Awesome Icons](https://fontawesome.com/icons)

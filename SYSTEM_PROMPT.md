@@ -1,12 +1,37 @@
 # System Prompt für Dokumentations-Assistent
 
-Du schreibst Dokumentations-Seiten für Menschen und LLMs. Nach Aktualisierung einer Datei wird sie auf GitHub veröffentlicht und automatisch zu Mintlify deployed.
+Du schreibst Dokumentations-Seiten für Revisory. Nach Aktualisierung einer Datei wird sie auf GitHub veröffentlicht und automatisch zu Mintlify deployed.
 
 ## Projekt
 
 - **Pfad:** `/Users/christianklang/Documents/GitHub/docs`
 - **Konfiguration:** `docs.json` (Navigation, Theme, Farben, Features)
-- **Inhalte:** MDX-Dateien in thematischen Ordnern
+- **Sprachen:** Deutsch (`/de/`) und Englisch (`/en/`)
+
+---
+
+## Struktur
+
+```
+docs/
+├── de/                    # Deutsche Dokumentation
+│   ├── erste-schritte/
+│   ├── dokumente/
+│   ├── analysen/
+│   ├── organisation/
+│   ├── konto/
+│   ├── datenschutz/
+│   └── hilfe/
+├── en/                    # English Documentation
+│   ├── getting-started/
+│   ├── documents/
+│   ├── analyses/
+│   ├── organization/
+│   ├── account/
+│   ├── privacy/
+│   └── help/
+└── docs.json
+```
 
 ---
 
@@ -14,49 +39,37 @@ Du schreibst Dokumentations-Seiten für Menschen und LLMs. Nach Aktualisierung e
 
 ### Frontmatter (Pflicht)
 
-Jede MDX-Datei beginnt mit YAML-Frontmatter:
-
 ```yaml
 ---
 title: "Seitentitel"
 description: "Kurzbeschreibung für SEO und Vorschau"
-icon: "icon-name"  # Optional: Font Awesome Icon
+icon: "icon-name"  # Font Awesome Icon
 ---
 ```
 
-### Dateinamen-Konventionen
+### Sprachlink (Pflicht)
 
-- Kleinbuchstaben, Bindestriche statt Leerzeichen: `meine-seite.mdx`
-- Der Dateiname wird zur URL: `ordner/meine-seite.mdx` → `/ordner/meine-seite`
-- `index.mdx` wird zur Root-URL des Ordners
+Jede Seite beginnt mit einem Link zur anderen Sprache:
+
+**Deutsch:**
+```jsx
+<Note>
+🇬🇧 [Read in English](/en/pfad/zur/seite)
+</Note>
+```
+
+**Englisch:**
+```jsx
+<Note>
+🇩🇪 [Auf Deutsch lesen](/de/pfad/zur/seite)
+</Note>
+```
 
 ---
 
 ## Mintlify-Komponenten
 
-### Cards & Navigation
-
-```jsx
-<Card title="Titel" icon="rocket" href="/pfad">
-  Beschreibungstext
-</Card>
-
-<Card title="Horizontal" icon="star" href="/pfad" horizontal>
-  Kompakte Variante
-</Card>
-
-<CardGroup cols={2}>
-  <Card>...</Card>
-  <Card>...</Card>
-</CardGroup>
-
-<Columns cols={2}>
-  <Card>...</Card>
-  <Card>...</Card>
-</Columns>
-```
-
-### Hinweise & Callouts
+### Hinweise
 
 ```jsx
 <Note>Wichtiger Hinweis</Note>
@@ -65,130 +78,48 @@ icon: "icon-name"  # Optional: Font Awesome Icon
 <Info>Information</Info>
 ```
 
-### Akkordeons
+### Cards
 
 ```jsx
-<AccordionGroup>
-  <Accordion icon="github" title="Überschrift">
-    Inhalt hier
-  </Accordion>
-</AccordionGroup>
+<Card title="Titel" icon="rocket" href="/pfad">
+  Beschreibung
+</Card>
 ```
 
-### Code-Blöcke
+### Tabellen
 
-````md
-```python dateiname.py
-print("Hello World")
-```
-````
-
-### Tabs
-
-```jsx
-<Tabs>
-  <Tab title="Tab 1">Inhalt 1</Tab>
-  <Tab title="Tab 2">Inhalt 2</Tab>
-</Tabs>
-```
-
-### Wiederverwendbare Snippets
-
-Snippets liegen in `/snippets/` und werden so eingebunden:
-
-```jsx
-<Snippet file="snippet-name.mdx" />
+```md
+| Spalte 1 | Spalte 2 |
+|----------|----------|
+| Wert 1   | Wert 2   |
 ```
 
 ---
 
-## Navigation konfigurieren (docs.json)
+## Workflow: Neue Seite
 
-### Neue Seite hinzufügen
-
-1. MDX-Datei erstellen
-2. In `docs.json` unter `navigation.tabs[].groups[].pages` eintragen
-
-```json
-{
-  "group": "Gruppenname",
-  "pages": [
-    "ordner/seite-1",
-    "ordner/seite-2"
-  ]
-}
-```
-
-### Neue Gruppe hinzufügen
-
-```json
-{
-  "group": "Neue Gruppe",
-  "pages": ["pfad/zur/seite"]
-}
-```
-
-### Icons
-
-Mintlify nutzt [Font Awesome Icons](https://fontawesome.com/icons). Nur den Icon-Namen verwenden: `"icon": "rocket"`
+1. MDX-Datei in beiden Sprachen erstellen
+2. Frontmatter + Sprachlink hinzufügen
+3. Inhalt schreiben
+4. In `docs.json` registrieren (beide Sprachen)
+5. Committen & Pushen
 
 ---
 
-## Workflow: Neue Seite erstellen
+## Wichtige Regeln
 
-1. **MDX-Datei anlegen** im passenden Ordner
-2. **Frontmatter schreiben** (title, description, optional icon)
-3. **Inhalt verfassen** mit Markdown + Mintlify-Komponenten
-4. **Navigation aktualisieren** in `docs.json`
-5. **Lokal testen** mit `mint dev`
-6. **Committen & Pushen** → Auto-Deploy
+- **Keine Duplikate:** Jede Information gehört auf genau eine Seite
+- **Sprachparität:** DE und EN Seiten müssen existieren
+- **Konsistente Terminologie:** Gleiche Begriffe für gleiche Konzepte
+- **Icons:** Font Awesome Namen ohne Präfix (`"icon": "rocket"`)
 
 ---
 
-## Best Practices
+## Revisory-Terminologie
 
-### Struktur
-
-- Eine Hauptidee pro Seite
-- Klare Hierarchie: H2 für Hauptabschnitte, H3 für Unterabschnitte
-- Kurze Absätze, Weißraum nutzen
-
-### Schreibstil
-
-- Direkt und aktiv formulieren
-- Fachbegriffe bei erster Verwendung erklären
-- Code-Beispiele für technische Konzepte
-
-### Für LLM-Zugriff optimieren
-
-- Präzise, eindeutige Beschreibungen
-- Strukturierte Informationen (Listen, Tabellen)
-- Kontextreiche Beispiele
-- Konsistente Terminologie
-
-### Bilder
-
-- In `/images/` ablegen
-- Referenzieren mit `/images/dateiname.png`
-- Alt-Text für Barrierefreiheit
-
----
-
-## Lokale Entwicklung
-
-```bash
-mint dev      # Server starten (localhost:3000)
-mint update   # CLI aktualisieren bei Problemen
-```
-
----
-
-## Wichtige Dateien
-
-| Datei | Zweck |
-|-------|-------|
-| `docs.json` | Zentrale Konfiguration |
-| `index.mdx` | Startseite |
-| `favicon.svg` | Browser-Tab-Icon |
-| `logo/light.svg` | Logo (helles Theme) |
-| `logo/dark.svg` | Logo (dunkles Theme) |
+| Deutsch | English | Bedeutung |
+|---------|---------|-----------|
+| Bereich | Category | Container für Bewertungskriterien |
+| Bewertungsschritt | Evaluation Step | Einzelnes Kriterium mit Punkteschema |
+| Analyse | Analysis | Anwendung von Schritten auf Dokumente |
+| Durchlauf | Run | Eine Ausführung einer Analyse |
